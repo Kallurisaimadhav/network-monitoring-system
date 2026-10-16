@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Starting Network Monitor..."
+        /usr/bin/network_monitor &
+        ;;
+    stop)
+        killall network_monitor
+        ;;
+    restart)
+        killall network_monitor
+        /usr/bin/network_monitor &
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0

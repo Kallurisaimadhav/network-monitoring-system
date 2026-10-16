@@ -1,0 +1,4 @@
+config BR2_PACKAGE_NETWORK_MONITOR
+	bool "Network Monitor"
+	help
+	  Embedded Network Monitoring System using Buildroor.
